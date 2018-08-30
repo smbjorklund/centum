@@ -1,0 +1,265 @@
+/* custom.css 
+ Laboratoire NT2
+*/
+
+.region-home-services {
+  margin: 0 10px;
+}
+#logo {
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.view-creative-works-frontpage td {
+	vertical-align:top;
+}
+.view-creative-works-frontpage h3 {
+	line-height: 1.25
+}
+.view-creative-works-frontpage td {
+	padding-bottom:2em;
+}
+.page-blog .post-content {
+  margin: 22px 0 2em 55px;
+}
+.page-blog h2 {
+  font-weight: normal;
+}
+.node-type-blog-entry .field-name-field-main-image {
+  margin-bottom: 2em;
+}
+.block-menu ul.menu li {
+  display: inline-block;
+  margin: 0 0 0 0.5em;
+}
+#wrapper {
+  padding-top: 35px;
+}
+#header-top {
+  margin: 0 0 20px;
+}
+#block-menu-menu-second-menu {
+  float: left;
+  margin: 0 0 20px;
+}
+/* TODO: bloc sélecteur de langue avec float:right */
+
+/* titres des blocs */
+.block-views h2,
+.block-aggregator h2 {
+  padding-bottom: 1em;
+}
+#block-views-blog-accueil-block .post-title h2 {
+  padding-bottom: 0;
+}
+.post-description {
+  line-height: 1.5;
+  padding-bottom: 0.5em;
+}
+.more-link {
+  float: right;
+  line-height: 1.5;
+  padding-bottom: 1.5em;
+}
+.views-row .post-img {
+	clear: both;
+}
+#footer-bottom a {
+  display: inline-block;
+}
+#block-block-5 {
+  margin: 2em 0;
+}
+#footer-bottom {
+  border-top: none;
+  margin-top: 5px;
+}
+
+/* Accueil */
+.view-blog-accueil.view-display-id-block .col-first .post-img {
+  padding-right: 0.5em;
+}
+.view-blog-accueil.view-display-id-block .col-last .post-img {
+  padding-left: 0.5em;
+}
+
+/* Taxonomie */
+.field-name-field-vocabulary-term a.post-entry,
+.node-taxonomy-vocabulary a.post-entry {
+  display: none;
+}
+.node-taxonomy-term  {
+  margin: 0;
+}
+.node-taxonomy-term .post-content {
+}
+.node-taxonomy-vocabulary .field-name-body {
+  padding-bottom: 2em;
+}
+
+/* creative work */
+/* Sous le titre, tous les champs ont du padding dessous */
+.region-home-services .block-cck-blocks {
+  padding-bottom: 2em;
+}
+
+/* Dans Creative Work, tous les champs ont du padding dessous */
+.node-work .post-description .field {
+  padding-bottom: 1em;
+}
+/* sauf ces champs */
+.node-work .post-description .field-name-field-source,
+.node-work .post-description .field-name-field-entry-url {
+  padding-bottom: 0;
+}
+.node-work .post-icon.standard {
+  display: none;
+}
+.node-work .post-content {
+  margin: 22px 0 0;
+}
+/* Search */
+
+/*.node.view-mode-search_result */ 
+.view-index-search-engine td {
+  border: 1px solid #5ca20d;
+  display: inline-block;
+  min-height: 340px;
+  padding: 20px 25px;
+  vertical-align: top;
+  width: 276px;
+}
+/* responsive*/
+.view-index-search-engine td {
+  margin: 0 20px 20px 0;
+}
+.view-index-search-engine td.col-first,
+.view-index-search-engine td.col-last {}
+
+
+.view-index-search-engine table {
+  padding-bottom: 2em;
+}
+.view-index-search-engine .views-field {
+  margin-bottom: 1em;
+}
+.view-index-search-engine .views-field-field-source {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.view-index-search-engine .views-field-title {
+  font-size: 2em;
+  margin-bottom: 0.25em; /* 1em relative to the font size */
+}
+.view-index-search-engine .views-field-field-primary-creator {
+  font-weight: bold;
+}
+
+/* Documentation */
+.view-documentation-list .view-header {
+  margin-bottom: 2em;
+}
+.view-documentation-list .views-row {
+  margin-bottom: 2em;
+}
+.view-documentation-list .views-field-title {
+  font-size: 2em;
+}
+
+/* Members + Partners */
+.view-members-list .view-header,
+.view-partners-list .view-header {
+  margin-bottom: 2em;
+}
+.view-members-list  .views-row,
+.view-partners-list  .views-row  {
+  margin-bottom: 2em;
+}
+.view-members-list  .views-field-title,
+.view-partners-list  .views-field-title {
+  font-size: 2em;
+}
+.view-members-list .views-field-field-main-image,
+.view-partners-list .views-field-field-main-image {
+  margin-bottom: 1em;
+}
+
+/* Search */
+#block-views-exp-index-search-engine-page {
+  float: right;
+  padding: 0 0 1em;
+}
+.views-exposed-form .views-exposed-widget {
+  padding: 0 1em 0 0;
+}
+#edit-search-api-views-fulltext-wrapper {
+  padding: 0;
+}
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0;
+}
+.views-exposed-form .views-exposed-widget input[type="text"]{
+  padding: 7px;
+}
+.views-exposed-form .views-exposed-widget .form-submit {
+  padding: 8px 12px 7px;
+}
+#sidebar-first #edit-search-api-views-fulltext-wrapper {
+  padding: 0;
+  width: 141px;
+}
+/* Blog */
+.view-blog-accueil td  {
+  width: 50%;
+}
+/* Agregator = News from partners */
+.item-list .pager {
+  margin-top: 25px;
+}
+/* ne pas supprimer les espaces entre les paragraphes (supprimé par le thème payant) */
+.content p {
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+.view-news-from-partners .views-field {
+  font-size: 14px;
+}
+.view-news-from-partners .views-row {
+  margin-bottom: 1em;
+}
+
+
+/* TOC */
+.field-name-body li,
+.toc li {
+  list-style: inside none disc;
+  font-size: 12px;
+}
+.toc ul {
+  margin-left: 16px;
+}
+/* Tweak:;
+   In the admin section under Content/Text Input, 
+   (admin/config/content/formats/filtered_html)
+   you can change the number of visible levels 
+   Max=H3 Min=H3 is showing a single level 
+   Max=H3 Min=H4 is showing two levels,
+   etc.
+   */
+/* A copy of the TOC is in a block. Hide the original version */
+.field-name-body .toc {
+  display: none;
+}
+.toc-back-to-top {
+  background-image: none;
+}
+.toc-list em {
+  font-style: normal;
+}
+.toc-list strong {
+  color: inherit;
+  font-weight: normal;
+}
+.content .toc {
+  padding: 20px 0;
+}

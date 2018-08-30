@@ -1,0 +1,153 @@
+#navigation .search-form .form-actions,#navigation .search-form label{
+  display: none;
+}
+.sidebar #search-block-form .form-actions{
+  display: none;
+}
+.sidebar .menu{
+  list-style: none;
+}
+.sidebar .menu li{
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .widget:first-child{
+  margin-top: -5px;
+}
+.field-type-taxonomy-term-reference .field-item{
+  display: inline;
+}
+.field-type-taxonomy-term-reference .field-item:after{
+  content: ', ';
+}
+.field-type-taxonomy-term-reference .field-item:last-child:after{
+  content: '';
+}
+ul.links.inline li{
+  padding-left: 0;
+}
+.form-actions .form-submit {
+  margin-right: 8px;
+}
+#home-slider{
+  margin-bottom: 35px;
+}
+.item-list ul li{
+  margin: 0;
+  padding: 0;
+}
+ul.primary li a{
+  margin-right: 0;
+}
+.portfolio-view-content{
+  margin-top: 30px;
+}
+#footer .widget_twitter a{
+  color: #FFF;
+}
+
+.widget_twitter li {
+  line-height: 18px;
+  margin: 2px 0 12px;
+}
+div.notification{
+  background: none;
+}
+.content .icon-box-container p{
+  margin-bottom: 15px;
+}
+#googlemaps{
+  background-color: #E5E3DF;
+  overflow: hidden;
+  height: 250px;
+}
+.tags a.tagadelic{
+  font-size: 100%;
+}
+.item-list .pager li{
+  padding: 5px 10px;
+  margin-right: 1px;
+}
+.item-list .pager{
+  text-align: left;
+  margin-bottom: 25px;
+}
+#comments .comment:first-child{
+  border: medium none;
+  padding: 25px 0 0;
+}
+#comments .comment{
+  border-bottom: 1px solid #E7E7E7;
+  float: left;
+  padding: 25px 0 20px;
+}
+.comment .user-picture img{
+  width: 50px;
+  height: 50px;
+}
+.title-comment-form-wrap{
+  margin-top: 35px;
+}
+.comment .submitted,.comment .submitted a,.comment .submitted span{
+  color: #888888;
+}
+.comment .permalink{
+  margin-left: 5px;
+}
+.comment .comment-by h4{
+  font-size: 12px;
+  line-height: 1.5em;
+  padding: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.comment .comment-by h4 a{
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+.comment .user-picture{
+  margin-top: 8px;
+}
+.list-inline li{
+  float: left;
+}
+.team-name p{
+  margin-bottom: 0;
+}
+.content .team-about p{
+  margin-bottom: 15px;
+}
+
+.node-forum .post-content{
+  margin-top: 0;
+}
+.node-forum .user-picture img{
+  display: inline-block;
+  float: left;
+  height: 35px;
+  width: 35px;
+  margin-top: 8px;
+}
+.feed-icon{
+  clear: both;
+  display: block;
+}	
+.breadcrumb a {
+  color: #888888;
+}
+.breadcrumb a:hover {
+  color: #666666;
+}
+.field-name-taxonomy-forums{
+  margin-bottom: 8px;
+}
+.field-name-taxonomy-forums label{
+  display: inline;
+}
+.field-name-taxonomy-forums .field-item{
+  display: inline;
+}
+#home-slider .flex-control-thumbs{display: none;}

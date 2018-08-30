@@ -1,0 +1,99 @@
+name = Centum
+description = Centum theme, developed by <a href="http://tabvn.com/">Tabvn</a>.
+core = 7.x
+
+
+;stylesheets[all][] = css/base.css
+;stylesheets[all][] = css/skeleton.css
+;stylesheets[all][] = css/fancybox.css
+;stylesheets[all][] = css/style.css
+;stylesheets[all][] = css/boxed.css
+;stylesheets[all][] = css/colors/green.css
+;stylesheets[all][] = css/centum.css
+stylesheets[all][] = css/custom.css
+
+scripts[] = js/custom.js
+scripts[] = js/selectnav.js
+scripts[] = js/flexslider.js
+scripts[] = js/tooltip.js
+scripts[] = js/effects.js
+scripts[] = js/fancybox.js
+scripts[] = js/carousel.js
+scripts[] = js/isotope.js
+scripts[] = js/centum.js
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+
+
+
+regions[help] = Help
+regions[header_top] = Header top
+regions[header] = Header
+regions[header_below] = Header below
+
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+regions[featured] = Featured
+
+regions[home_services] = Home services
+regions[content_top] = Content Top
+regions[content] = Content
+regions[content_bottom] = Content Bottom
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+;regions[footer] = Footer
+regions[footer_below] = Footer Below
+
+;social links settings
+
+settings[twitter_url] = #
+settings[facebook_url] = #
+settings[dribbble_url] = #
+settings[linkedin_url] = #
+settings[pintrest_url] = #
+settings[youtube_url] = ''
+
+;header contact info settings
+settings[header_contact_email] = support@centum.com
+settings[header_contact_phone] = +48 880 450 120
+
+;footer copyright message 
+settings[footer_copyright_message] =  © Copyright 2012 by <a href="#">Centum</a>. All rights reserved. 
+
+;porfolio
+settings[default_portfolio] = 4c
+settings[default_nodes_portfolio] = 12
+
+
+;slider settings
+
+settings[default_banners][1][image_path]        = images/slider-img-01.jpg
+settings[default_banners][1][image_title]       = This is a caption
+settings[default_banners][1][image_description] = Donec scelerisque aliquet mi, non venenatis urnas iaculis. Utea id nila ante. Cras est massa, interdum  ateal imperdiet etean, gravida eu quame. Aeneana volutpat hendrerit posuere.
+settings[default_banners][1][image_published]   = TRUE
+settings[default_banners][1][image_weight]      = 0
+
+settings[default_banners][2][image_path]        = images/slider-img-02.jpg
+settings[default_banners][2][image_title]       = This is a caption
+settings[default_banners][2][image_description] = Donec scelerisque aliquet mi, non venenatis urnas iaculis. Utea id nila ante. Cras est massa, interdum  ateal imperdiet etean, gravida eu quame. Aeneana volutpat hendrerit posuere.
+settings[default_banners][2][image_published]   = TRUE
+settings[default_banners][2][image_weight]      = 1
+
+
+;skin settings
+
+settings[theme_color] = green.css
+settings[theme_background_color] = ''
+settings[theme_background_image] = noise.png
+settings[theme_layout_style] = boxed.css
