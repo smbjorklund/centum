@@ -52,7 +52,7 @@ function centum_preprocess_page(&$vars) {
     $vars['navigation'] = $custom_main_menu['content'];
   }
 
-  if (arg(0) == 'node' && arg(1)) {
+  if (arg(0) === 'node' && arg(1)) {
     $nid = arg(1);
 
     $node = node_load($nid);

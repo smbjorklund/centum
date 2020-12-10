@@ -6,47 +6,38 @@
 function centum_settings_submit($form, &$form_state) {
   $settings = array();
 
-  // Update image field
   foreach ($form_state['input']['images'] as $image) {
     if (is_array($image)) {
       $image = $image['image'];
 
       if ($image['image_delete']) {
-        // Delete banner file
         file_unmanaged_delete($image['image_path']);
-        // Delete banner thumbnail file
         file_unmanaged_delete($image['image_thumb']);
       } else {
-        // Update image
         $settings[] = $image;
       }
     }
   }
 
-  // Check for a new uploaded file, and use that if available.
   if ($file = file_save_upload('image_upload')) {
     $file->status = FILE_STATUS_PERMANENT;
+
     if ($image = _centum_save_image($file)) {
-      // Put new image into settings
       $settings[] = $image;
     }
   }
 
-  // Save settings
   centum_set_banners($settings);
 }
 
 /**
  * Check if folder is available or create it.
  *
- * @param <string> $dir
- *    Folder to check
+ * @param string $dir
+ *    Directory to check.
  */
-function _centum_check_dir($dir) {
-  // Normalize directory name
+function _centum_check_dir(string $dir) {
   $dir = file_stream_wrapper_uri_normalize($dir);
-
-  // Create directory (if not exist)
   file_prepare_directory($dir, FILE_CREATE_DIRECTORY);
 }
 
@@ -56,13 +47,13 @@ function _centum_check_dir($dir) {
  * @param <file> $file
  *    File uploaded from user
  *
- * @param <string> $banner_folder
+ * @param string $banner_folder
  *    Folder where save image
  *
- * @param <string> $banner_thumb_folder
+ * @param string $banner_thumb_folder
  *    Folder where save image thumbnail
  *
- * @return <array>
+ * @return array|false Array with file data.
  *    Array with file data.
  *    FALSE on error.
  */
@@ -103,19 +94,19 @@ function _centum_save_image($file, $banner_folder = 'public://banner/', $banner_
 }
 
 /**
- * Provvide default installation settings for centum.
+ * Provide default installation settings for centum.
  */
 function _centum_install() {
-  // Deafault data
+  // Default data.
   $file = new stdClass;
   $banners = array();
-  // Source base for images
+  // Source base for images.
 
   $src_base_path = drupal_get_path('theme', 'centum');
   $default_banners = theme_get_setting('default_banners', 'centum');
 
 
-  // Put all image as banners
+  // Put all image as banners.
   foreach ($default_banners as $i => $data) {
     $file->uri = $src_base_path . '/' . $data['image_path'];
     $file->filename = $file->uri;
