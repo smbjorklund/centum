@@ -93,7 +93,7 @@ function centum_format_comma_field($field_category, $node, $limit = NULL) {
 
 function centum_preprocess_node(&$variables) {
   $variables['view_mode'] = $variables['elements']['#view_mode'];
-  $variables['teaser'] = $variables['view_mode'] == 'teaser';
+  $variables['teaser'] = $variables['view_mode'] === 'teaser';
   $variables['node'] = $variables['elements']['#node'];
   $node = $variables['node'];
   $variables['date'] = format_date($node->created);
@@ -101,7 +101,7 @@ function centum_preprocess_node(&$variables) {
   $uri = entity_uri('node', $node);
   $variables['node_url'] = url($uri['path'], $uri['options']);
   $variables['title'] = check_plain($node->title);
-  $variables['page'] = $variables['view_mode'] == 'full' && node_is_page($node);
+  $variables['page'] = $variables['view_mode'] === 'full' && node_is_page($node);
   $variables = array_merge((array) $node, $variables);
   $variables += array('content' => array());
 
