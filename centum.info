@@ -25,19 +25,16 @@ regions[help] = Help
 regions[header_top] = Header top
 regions[header] = Header
 regions[header_below] = Header below
-
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 regions[featured] = Featured
-
 regions[home_services] = Home services
 regions[content_top] = Content Top
 regions[content] = Content
 regions[content_bottom] = Content Bottom
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
-
 regions[footer_firstcolumn] = Footer first column
 regions[footer_secondcolumn] = Footer second column
 regions[footer_thirdcolumn] = Footer third column
