@@ -3,12 +3,9 @@
 require_once 'includes/slider.inc';
 
 function centum_form_system_theme_settings_alter(&$form, $form_state) {
-
   $theme_path = drupal_get_path('theme', 'centum');
   drupal_add_js($theme_path . '/js/colorpicker.js');
   drupal_add_css($theme_path . '/css/colorpicker.css');
-
-
   _centum_custom_js();
   $form['settings'] = array(
       '#type' => 'vertical_tabs',
@@ -17,9 +14,6 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
       '#collapsible' => TRUE,
       '#collapsed' => FALSE,
   );
-
-
-
 
   $form['settings']['header_contact'] = array(
       '#type' => 'fieldset',
@@ -33,12 +27,12 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
       '#type' => 'textfield',
       '#default_value' => theme_get_setting('header_contact_email', 'centum'),
   );
+
   $form['settings']['header_contact']['header_contact_phone'] = array(
       '#title' => t('Phone number'),
       '#type' => 'textfield',
       '#default_value' => theme_get_setting('header_contact_phone', 'centum'),
   );
-
 
   $form['settings']['social_links'] = array(
       '#type' => 'fieldset',
@@ -83,15 +77,12 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
       '#default_value' => theme_get_setting('default_portfolio', 'centum'),
   );
 
-
-
   $form['settings']['portfolio']['default_nodes_portfolio'] = array(
       '#type' => 'select',
       '#title' => t('Number nodes show on portfolio page'),
       '#options' => drupal_map_assoc(array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 100)),
       '#default_value' => theme_get_setting('default_nodes_portfolio', 'centum'),
   );
-
 
   $form['settings']['footer'] = array(
       '#type' => 'fieldset',
@@ -113,12 +104,8 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
       '#collapsed' => FALSE,
   );
 
-
-
   $dir = drupal_get_path('theme', 'centum') . DIRECTORY_SEPARATOR . 'css' . DIRECTORY_SEPARATOR . 'colors';
-
   $files = file_scan_directory($dir, '/.*\.css/');
-
   $css_files = array();
   if (!empty($files)) {
     foreach ($files as $file) {
@@ -128,21 +115,19 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
     }
   }
 
-
   $form['settings']['skin']['theme_layout_style'] = array(
       '#title' => t('Layout style'),
       '#type' => 'select',
       '#options' => array('boxed.css' => t('Boxed'), 'wide.css' => t('Wide')),
       '#default_value' => theme_get_setting('theme_layout_style', 'centum'),
   );
+
   $form['settings']['skin']['theme_color'] = array(
       '#type' => 'select',
       '#title' => t('Select default color'),
       '#default_value' => theme_get_setting('theme_color', 'centum'),
       '#options' => $css_files,
   );
-
-  // bg color
 
   $form['settings']['skin']['theme_background_color'] = array(
       '#type' => 'textfield',
@@ -153,11 +138,8 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
   );
 
 
-  // bg background
   $dir = drupal_get_path('theme', 'centum') . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR . 'bg';
-
   $files = file_scan_directory($dir, '/.*\.png/');
-
 
   $bg_files = array('' => t('[None]'));
   if (!empty($files)) {
@@ -176,9 +158,6 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
       '#description' => t('This feature is for boxed style.')
   );
 
-
-
-//slider
   $form['slider'] = array(
       '#type' => 'fieldset',
       '#title' => t('Slider managment'),
@@ -223,8 +202,6 @@ function centum_form_system_theme_settings_alter(&$form, $form_state) {
 }
 
 function _centum_custom_js() {
-
-
   $js_code = "(function ($)  {
     $(document).ready(function(){
       $('.colorSelector').each(function(){
@@ -242,14 +219,9 @@ function _centum_custom_js() {
           },
           onChange: function (hsb, hex, rgb) {
             \$select_item.val('#' + hex);
-            
           }
         });
-      
-      
       });
-      
-      
     });
   })(jQuery);";
 
