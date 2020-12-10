@@ -74,7 +74,6 @@ function centum_preprocess_page(&$vars) {
 
 function centum_format_comma_field($field_category, $node, $limit = NULL) {
   $category_arr = array();
-  $category = '';
 
   if (!empty($node->{$field_category}[LANGUAGE_NONE])) {
     foreach ($node->{$field_category}[LANGUAGE_NONE] as $item) {
@@ -84,16 +83,14 @@ function centum_format_comma_field($field_category, $node, $limit = NULL) {
       }
 
       if ($limit) {
-        if (count($category_arr) == $limit) {
-          $category = implode(', ', $category_arr);
-          return $category;
+        if (count($category_arr) === $limit) {
+          return implode(', ', $category_arr);
         }
       }
     }
   }
 
-  $category = implode(', ', $category_arr);
-  return $category;
+  return implode(', ', $category_arr);
 }
 
 function centum_preprocess_node(&$variables) {
