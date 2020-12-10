@@ -54,13 +54,9 @@ function centum_preprocess_page(&$vars) {
 
   if (arg(0) === 'node' && arg(1)) {
     $nid = arg(1);
-
     $node = node_load($nid);
-    switch ($node->type) {
-      case 'blog':
-        $vars['title'] = t('Blog');
-
-        break;
+    if ($node->type === 'blog') {
+      $vars['title'] = t('Blog');
     }
   }
 
