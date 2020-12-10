@@ -5,12 +5,12 @@ include_once __DIR__ . '/includes/slider.inc';
 
 function _centum_add_css() {
   $theme_path = path_to_theme();
-  $css_arr = array(
-      'css/base.css',
-      'css/skeleton.css',
-      'css/fancybox.css',
-      'css/style.css',
-  );
+  $css_arr = [
+    'css/base.css',
+    'css/skeleton.css',
+    'css/fancybox.css',
+    'css/style.css',
+  ];
 
   foreach ($css_arr as $css) {
     drupal_add_css($theme_path . '/' . $css);
@@ -31,13 +31,14 @@ function centum_preprocess_html(&$variables) {
   _centum_add_css();
 
   drupal_add_html_head(
-          array(
+    [
       '#tag' => 'meta',
-      '#attributes' => array(
+      '#attributes' =>
+        [
           'name' => 'viewport',
           'content' => 'width=device-width, initial-scale=1',
-      ),
-          ), 'centum:viewport_meta'
+        ],
+    ], 'centum:viewport_meta'
   );
 }
 
