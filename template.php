@@ -82,10 +82,8 @@ function centum_format_comma_field($field_category, $node, $limit = NULL) {
         $category_arr[] = l($term->name, 'taxonomy/term/' . $item['tid']);
       }
 
-      if ($limit) {
-        if (count($category_arr) === $limit) {
-          return implode(', ', $category_arr);
-        }
+      if ($limit && count($category_arr) === $limit) {
+        return implode(', ', $category_arr);
       }
     }
   }
