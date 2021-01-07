@@ -1,10 +1,6 @@
 <!-- Wrapper Start -->
 <div id="wrapper">
-
-
-  <!-- Header
-  ================================================== -->
-
+  <!-- Header -->
   <?php if ($page['header_top']): ?>
     <div class="container" id="header-top">
       <?php print render($page['header_top']); ?>
@@ -13,10 +9,8 @@
 
   <!-- 960 Container -->
   <div class="container ie-dropdown-fix">
-
     <!-- Header -->
     <div id="header">
-
       <!-- Logo -->
       <div class="eight columns">
         <?php if ($logo): ?>
@@ -32,8 +26,6 @@
 
       <!-- Social / Contact -->
       <div class="eight columns">
-
-
         <!-- Social Icons -->
         <ul class="social-icons">
           <?php
@@ -89,9 +81,7 @@
             </ul>
           <?php endif; ?>
         </div>
-
       </div>
-
     </div>
     <!-- Header / End -->
 
@@ -109,86 +99,50 @@
 
     <!-- Navigation -->
     <div class="sixteen columns">
-
-
       <div id="navigation">
         <?php if (!empty($navigation)): ?>
           <?php print $navigation; ?>
         <?php endif; ?>
-
-        <?php if (!empty($seach_block_form)): ?>
-          <!-- Search Form -->
-          <div class="search-form">
-            <?php print $seach_block_form; ?>
-          </div>
-        <?php endif; ?>
-
-      </div> 
+      </div>
       <div class="clear"></div>
-
     </div>
     <!-- Navigation / End -->
 
   </div>
   <!-- 960 Container / End -->
 
-
-    <?php if ($page['featured']): ?>
-            <div class="sixteen columns">
+  <?php if ($page['featured']): ?>
+    <div class="sixteen columns">
       <div class="container" id="featured">
         <?php print render($page['featured']); ?>
-              </div>
       </div>
-    <?php endif; ?>
-
+    </div>
+  <?php endif; ?>
 
   <?php if ($breadcrumb): ?>
     <div class="container">
-
       <div class="sixteen columns">
         <div id="breadcrumb"><?php print $breadcrumb; ?></div>
       </div>
     </div>
   <?php endif; ?>
 
-
-
-
-
   <?php if ($title): ?>
-    <!-- // page title -->
     <div class="container">
-
-      <div class="sixteen columns">
-
-        <!-- Page Title : Print Section Name (Blog) instead of title-->
-        <!-- div id="page-title" -->
-          <!--h2--><?php //print $title; ?><!--/h2-->
-          <!--div id="bolded-line"></div-->
-        <!--/div-->
-        <!-- Page Title / End -->
-
-      </div>
+      <div class="sixteen columns"></div>
     </div>
-    <!-- // end page title -->
   <?php endif; ?>
-
-
-  <!-- Content
-  ================================================== -->
+  <!-- Content -->
 
   <!-- 960 Container -->
   <div class="container">
     <?php if (drupal_is_front_page() && !empty($slider)): ?>
-      <!-- Flexslider -->
       <div class="sixteen columns">
         <section class="slider">
           <?php print $slider; ?>
         </section>
       </div>
-      <!-- Flexslider / End -->
     <?php endif; ?>
-
   </div>
   <!-- 960 Container / End -->
 
@@ -198,27 +152,21 @@
     </div>
   <?php endif; ?>
 
-
   <!-- 960 Container -->
   <div class="container">
 
     <?php if ($page['highlighted']): ?>
       <div class="sixteen columns">
         <?php print render($page['highlighted']); ?>
-
       </div>
       <div class="clear"></div>
     <?php endif; ?>
 
-
-
     <?php if ($page['sidebar_first']): ?>
       <div class="sidebar four columns" id="sidebar-first">
-
         <?php print render($page['sidebar_first']); ?>
       </div>
     <?php endif; ?>
-
 
     <?php
     $content_class = 'main-content';
@@ -244,24 +192,28 @@
               <?php print render($tabs); ?>
             </div>
           <?php endif; ?>
+
           <?php print render($page['help']); ?>
+
           <?php if ($action_links): ?>
             <ul class="action-links">
               <?php print render($action_links); ?>
             </ul>
-
-
           <?php endif; ?>
+
           <?php if (!$page['sidebar_first'] && !$page['sidebar_second']): ?>
-          </div></div>
-      <?php endif; ?>
+            </div></div>
+          <?php endif; ?>
+
       <?php
       $page_content_class = 'page-content';
 
       if (!($page['sidebar_second']) && !($page['sidebar_first'])) {
         $path_alias = drupal_get_path_alias();
+
         if (arg(0) == 'node' && is_numeric(arg(1))) {
           $node = node_load(arg(1));
+
           if ($node->type == 'page' || $node->type == 'portfolio') {
             $path_alias = 'node-page';
           }
@@ -274,6 +226,7 @@
             'front-page',
             'node-page',
         );
+
         if (!in_array($path_alias, $allow_alias)) {
           $page_content_class = 'sixteen columns';
         }
