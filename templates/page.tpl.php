@@ -1,10 +1,6 @@
 <!-- Wrapper Start -->
 <div id="wrapper">
-
-
-  <!-- Header
-  ================================================== -->
-
+  <!-- Header -->
   <?php if ($page['header_top']): ?>
     <div class="container" id="header-top">
       <?php print render($page['header_top']); ?>
@@ -13,10 +9,8 @@
 
   <!-- 960 Container -->
   <div class="container ie-dropdown-fix">
-
     <!-- Header -->
     <div id="header">
-
       <!-- Logo -->
       <div class="eight columns">
         <?php if ($logo): ?>
@@ -32,7 +26,6 @@
 
       <!-- Social / Contact -->
       <div class="eight columns">
-
 
         <!-- Social Icons -->
         <ul class="social-icons">
@@ -142,44 +135,28 @@
     </div>
   <?php endif; ?>
 
-
-
-
-
   <?php if ($title): ?>
-    <!-- // page title -->
     <div class="container">
-
       <div class="sixteen columns">
-
-        <!-- Page Title -->
         <div id="page-title">
           <h2><?php print $title; ?></h2>
           <div id="bolded-line"></div>
         </div>
-        <!-- Page Title / End -->
-
       </div>
     </div>
-    <!-- // end page title -->
   <?php endif; ?>
 
-
-  <!-- Content
-  ================================================== -->
+  <!-- Content -->
 
   <!-- 960 Container -->
   <div class="container">
     <?php if (drupal_is_front_page() && !empty($slider)): ?>
-      <!-- Flexslider -->
       <div class="sixteen columns">
         <section class="slider">
           <?php print $slider; ?>
         </section>
       </div>
-      <!-- Flexslider / End -->
     <?php endif; ?>
-
   </div>
   <!-- 960 Container / End -->
 
@@ -189,30 +166,25 @@
     </div>
   <?php endif; ?>
 
-
   <!-- 960 Container -->
   <div class="container">
 
     <?php if ($page['highlighted']): ?>
       <div class="sixteen columns">
         <?php print render($page['highlighted']); ?>
-
       </div>
       <div class="clear"></div>
     <?php endif; ?>
 
-
-
     <?php if ($page['sidebar_first']): ?>
       <div class="sidebar four columns" id="sidebar-first">
-
         <?php print render($page['sidebar_first']); ?>
       </div>
     <?php endif; ?>
 
-
     <?php
     $content_class = 'main-content';
+
     if ($page['sidebar_second'] || $page['sidebar_first']) {
       if ($page['sidebar_first']) {
         $content_class = 'twelve columns';
@@ -223,9 +195,12 @@
     ?>
 
     <div id="content" class="<?php print $content_class; ?>">
+
       <?php if (!$page['sidebar_first'] && !$page['sidebar_second']): ?>
-        <div class="container"><div class="sixteen columns">
-          <?php endif; ?>
+        <div class="container">
+            <div class="sixteen columns">
+      <?php endif; ?>
+
           <?php print $messages; ?>
 
           <div class="clear"></div>
@@ -235,17 +210,19 @@
               <?php print render($tabs); ?>
             </div>
           <?php endif; ?>
+
           <?php print render($page['help']); ?>
+
           <?php if ($action_links): ?>
             <ul class="action-links">
               <?php print render($action_links); ?>
             </ul>
-
-
           <?php endif; ?>
+
           <?php if (!$page['sidebar_first'] && !$page['sidebar_second']): ?>
-          </div></div>
-      <?php endif; ?>
+            </div></div>
+          <?php endif; ?>
+
       <?php
       $page_content_class = 'page-content';
 
@@ -270,6 +247,7 @@
         }
       }
       ?>
+
       <?php if ($page['content_top']): ?>
         <div class="content" id="content-top">
           <?php print render($page['content_top']); ?>
@@ -280,13 +258,13 @@
         <?php print render($page['content']); ?>
       </div>
 
-    <?php if ($page['content_bottom']): ?>
+        <?php if ($page['content_bottom']): ?>
       <div class="content" id="content-bottom">
         <?php print render($page['content_bottom']); ?>
       </div>
     <?php endif; ?>
 
-      <?php print $feed_icons; ?>
+        <?php print $feed_icons; ?>
     </div>
 
     <?php if ($page['sidebar_second']): ?>
@@ -297,42 +275,33 @@
 
   </div>
   <!-- 960 Container / End -->
-
 </div>
 <!-- Wrapper / End -->
 
-
-<!-- Footer
-================================================== -->
-
+<!-- Footer -->
 <!-- Footer Start -->
 <div id="footer">
   <!-- 960 Container -->
   <div class="container">
-
 
     <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
       <!-- 1/4 Columns -->
       <div class="four columns">
         <?php print render($page['footer_firstcolumn']); ?>
       </div>
-
       <!--  1/4 Columns -->
       <div class="four columns">
         <?php print render($page['footer_secondcolumn']); ?>
       </div>
-
       <!-- 1/4 Columns -->
       <div class="four columns">
         <?php print render($page['footer_thirdcolumn']); ?>
         <div class="clearfix"></div>
       </div>
-
       <!-- 1/4 Columns -->
       <div class="four columns">
         <?php print render($page['footer_fourthcolumn']); ?>
       </div>
-
     <?php endif; ?>
 
     <!-- Footer / Bottom -->
@@ -345,9 +314,7 @@
         <div id="scroll-top-top"><a href="#"></a></div>
       </div>
     </div>
-
   </div>
   <!-- 960 Container / End -->
-
 </div>
 <!-- Footer / End -->
