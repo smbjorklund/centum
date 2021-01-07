@@ -115,15 +115,7 @@
         <?php if (!empty($navigation)): ?>
           <?php print $navigation; ?>
         <?php endif; ?>
-
-        <?php //if (!empty($seach_block_form)): ?>
-          <!-- Search Form -->
-          <!-- div class="search-form"-->
-            <?php // print $seach_block_form; ?>
-          <!-- /div -->
-        <?php //endif; ?>
-
-      </div> 
+      </div>
       <div class="clear"></div>
 
     </div>
@@ -131,7 +123,6 @@
 
   </div>
   <!-- 960 Container / End -->
-
 
     <?php if ($page['featured']): ?>
             <div class="sixteen columns">
