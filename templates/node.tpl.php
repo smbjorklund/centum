@@ -90,8 +90,9 @@
     <?php
     hide($content['field_image']);
     $field_image = field_get_items('node', $node, 'field_image');
-    if (!empty($field_image) && count($field_image) == 1):
-      ?>
+    ?>
+
+    <?php if (!empty($field_image) && count($field_image) === 1): ?>
 
       <?php $image_view_url = file_create_url($field_image[0]['uri']); ?>
 
@@ -113,21 +114,25 @@
         </div>
       <?php endif; ?>
 
-
-
-
     <?php endif; ?>
 
     <?php if (!empty($field_image) && count($field_image) > 1): ?>
-      <?php
-      $post_icon = 'gallery';
-      ?>
+      <?php $post_icon = 'gallery'; ?>
       <section class="slider">
         <div class="flexslider subpage">
           <ul class="slides">
             <?php foreach ($field_image as $img): ?>
               <?php $img_view = file_create_url($img['uri']); ?>
-              <li><div class="picture"><a href="<?php print $img_view; ?>" rel="image-gallery" title="<?php print $node->title; ?>"><?php print theme('image_style', array('style_name' => 'blog_teaser', 'path' => $img['uri'])); ?><div class="image-overlay-zoom"></div></a></div></li>
+                <li>
+                    <div class="picture"><a href="<?php print $img_view; ?>"
+                                            rel="image-gallery"
+                                            title="<?php print $node->title; ?>"><?php print theme('image_style', [
+                          'style_name' => 'blog_teaser',
+                          'path' => $img['uri'],
+                        ]); ?>
+                            <div class="image-overlay-zoom"></div>
+                        </a></div>
+                </li>
             <?php endforeach; ?>
           </ul>
         </div>
@@ -137,7 +142,7 @@
     <?php endif; ?>
   <?php endif; ?>
 
- <?php if($node->type != 'page'):?>
+ <?php if($node->type !== 'page'):?>
   <a class="post-icon <?php print $post_icon; ?>" href="<?php print $node_url; ?>"></a>
   <?php endif; ?>
 
@@ -176,9 +181,5 @@
       <?php print render($content['links']); ?>
     <?php endif; ?>
   </div>
-
-
-
   <?php print render($content['comments']); ?>
-
 </div>
