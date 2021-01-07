@@ -41,7 +41,8 @@
  *
  * @ingroup themeable
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 
 <!--[if IE 7 ]><html class="ie ie7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
@@ -51,27 +52,29 @@
     <?php print $head; ?>
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
+    <?php $layout_style = theme_get_setting('theme_layout_style', 'centum'); ?>
 
+    <?php if ($layout_style === 'boxed.css'): ?>
 
-    <?php
-    $layout_style = theme_get_setting('theme_layout_style', 'centum');
-    if ($layout_style == 'boxed.css'):
-      ?>
       <?php
       $bg_image = theme_get_setting('theme_background_image', 'centum');
       $bg_color = theme_get_setting('theme_background_color', 'centum');
+
       if (!empty($bg_image)) {
         $bg_image = base_path() . path_to_theme() . '/images/bg/' . $bg_image;
       }
       ?>
+
       <style type="text/css">
-        body{
+        body {
           <?php if (!empty($bg_color)): ?>
             background-color:<?php print $bg_color; ?>;
           <?php endif; ?>
+
           <?php if (!empty($bg_image)): ?>
             background-image:url("<?php print $bg_image; ?>") ;
           <?php endif; ?>
+
           <?php if (empty($bg_image)): ?>
             background-image: none;
           <?php endif; ?>
@@ -81,12 +84,15 @@
 
     <?php print $scripts; ?>
   </head>
+
   <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
     <div id="skip-link">
-      <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+      <a href="#main-content" class="element-invisible element-focusable">
+        <?php print t('Skip to main content'); ?></a>
     </div>
     <?php print $page_top; ?>
     <?php print $page; ?>
     <?php print $page_bottom; ?>
   </body>
+
 </html>
