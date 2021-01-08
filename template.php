@@ -66,10 +66,6 @@ function centum_preprocess_page(&$vars) {
 
   $banners = centum_show_banners();
   $vars['slider'] = centum_banners_markup($banners);
-  $seach_block_form = drupal_get_form('search_block_form');
-  $seach_block_form['#id'] = 'searchform';
-  $seach_block_form['search_block_form']['#attributes']['class'][] = 'search-text-box';
-  $vars['seach_block_form'] = drupal_render($seach_block_form);
 }
 
 function centum_format_comma_field($field_category, $node, $limit = NULL) {
